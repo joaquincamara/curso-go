@@ -6,7 +6,7 @@ Aprenderemos los conceptos y las practicas para entender y utilizar este lenguaj
 
 Durante mucho tiempo fue desarrollador front-end con Javascript, asi que igual compartire los problemas y obstaculos que viví al hacer la trancisión de ser un desarrollador front-end con Javascript a un desarrollador back-end con Go como lenguaje principal.
 
-Despues de aprender sobre el lenguaje, realizaremos un proyecto, el cual será un web service con el que podran servir la información de su curriculum desde una base de datos relacional hacia un curriculum digital.
+Despues de aprender sobre el lenguaje, pondremos en practica nuestros nuevos conocimientos realizando un proyecto, el cual será un web service con el que podran servir la información de su curriculum desde una base de datos relacional hacia un curriculum digital.
 
 Realizaremos este proyecto de tal forma que no nos represente un costo el tenerlo en linia y totalmente funcional para que lo puedan utilizar como parte de su portafolio.
 
