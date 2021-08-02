@@ -10,9 +10,30 @@ En google se llegó a la conclusión que algunos de los lenguajes usados para di
 
 ### Aqui fue donde Go llegó a traer los siguientes featuers:
 
-- Es un lenguaje fuertemente tipeado.
+- Go es un lenguaje compilado
+
+  - Con esto nos referimos a que antes de ser ejecutado, el codigo es procesado por un "compilador", el cual genera un archivo en codigo binario, tambien conocido como lenguaje maquina, para ser ejecutado por la computadora.
+
+- Es un lenguaje fuertemente tipado.
+
+  - Esto quiere decir que la comprovacion de los tipos de datos que utilicemos en nuestras variables serán comprobadas durante el tiempo de compilación y no durante la ejecución del programa.
+
 - Su comunidad se a vuelto extensa y muy activa.
+
+  - Esto es muy importante, ya que la comunidad que rodea a Go genera librerias, participa en el desarrollo del lenguaje, volviendolo mas popular y rico en diferentes herramientas que los desarrolladores pueden utilizar para crear programas eficientes.
+
 - Su sintaxis es simple.
-- El timepo de compilacion es corto en comparacion a otros lenguajes compilados.
+
+  - Aunque es verdad que algunos conceptos de Go llevan a una curva de aprendizaje, su sintaxis simple ayuda a entender rapidamente a los nuevos desarrolladores como utilizar el lenguaje y facilita el mantenimiento en proyectos ya existentes.
+
 - Fue creado con y para concurrencia.
+
+  Concurrencia es un concepto el cual aplicado permite a los programas ejectutar varias funciones, mas adelante hablaremos a detalle sobre este tema, las principales ventajas de haber creado Go bajo este esquema son:
+
+  - El timepo de compilacion es corto en comparacion a otros lenguajes compilados.
+  - El garbage collector es eficiente y en muchos casos no se percibe.
+  - Utilizar concurrencia en Go es sencillo y eficiente.
+
 - Genera binarios funcionales para multiples sistemas operativos.
+
+  Al terminar el proceso de compilacion y construccion de nuestro programa Go generara un binario ejecutable para diversos sistemas operativos como Mac, windows, Ubuntu, etc. Lo que vuelve la distribucion del sistema bastente sencilla.
