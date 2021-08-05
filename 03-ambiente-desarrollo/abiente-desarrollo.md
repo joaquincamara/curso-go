@@ -32,4 +32,7 @@ Obligandonos a tener todos nuestros proyectos dentro de esa URL. No era algo com
 
 Entonces que beneficios nos traen los Modulos en Go ?
 
-1.
+1. No es necesario poner nuestros proyectos dentro del GOPATH.
+2. Tenemos manejo de dependencias directamente desde el GO cli.
+3. El Go cli se encarga de descargar las dependencias de nuestro projecto.
+4. Nos permiten empaquer y utilizar varios paquetes tanto propios como terceros.
