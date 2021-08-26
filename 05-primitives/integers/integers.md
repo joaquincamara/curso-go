@@ -83,3 +83,4 @@ Generara un error.
 
 ## **Floats:**
 
+Los floats son un tipo de numero especial en Go
