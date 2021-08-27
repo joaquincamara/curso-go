@@ -83,4 +83,4 @@ Generara un error.
 
 ## **Floats:**
 
-Los floats son un tipo de numero especial en Go
+Los floats son un tipo de numero especial en Go que nos permiten utilizar numeros con el punto decimal.
