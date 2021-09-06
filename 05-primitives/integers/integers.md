@@ -54,7 +54,7 @@ func main() {
 }
 ```
 
-Si corremos el codig, podremos ver los resultados esperados en cada una de las operaciones, menos en una, x / y, nosotros sabemos que el resultado deberia de ser algo cercano a 3.333 pero como hemos platicado antes Go es un lenguaje fuertemente tipado, por lo tanto, para este caso no tendremos el resultado con numeros decimales, si no que Go se encargara de redondear el numero para que cumpla con el tipo de dato de la variable.
+Si corremos el codigo, podremos ver los resultados esperados en cada una de las operaciones, menos en una, x / y, nosotros sabemos que el resultado deberia de ser algo cercano a 3.333 pero como hemos platicado antes Go es un lenguaje fuertemente tipado, por lo tanto, para este caso no tendremos el resultado con numeros decimales, si no que Go se encargara de redondear el numero para que cumpla con el tipo de dato de la variable.
 
 Si ejecutamos este codigo:
 
@@ -83,6 +83,4 @@ Generara un error.
 
 ## **Floats:**
 
-Los floats son un tipo de numero especial en Go que nos permiten utilizar numeros con el punto decimal.
-
-Podemos
+Los floats son un tipo de numero especial en Go que nos permiten utilizar numeros con el punto decimal, esto nos permite realizar operaciones artimeticas con resultados mas complejos, 
