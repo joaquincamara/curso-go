@@ -95,3 +95,18 @@ Los floats son un tipo de numero especial en Go que nos permiten utilizar numero
     yx := 12.234 // Siempre sera float64
 
 ```
+
+Al igual que con los tipos numericos "int" con los floats tenemos la posibilidad de realizar las siguientes operaciones aritmeticas:
+
+```golang
+
+func main() {
+    x = 10.05
+    y = 3.05
+    
+    fmt.Println(x + y) // 13.1
+    fmt.Println(x - y) // 7
+    fmt.Println(x * y) // 30.6525
+    fmt.Println(x / y) // 3.4426
+}
+```
