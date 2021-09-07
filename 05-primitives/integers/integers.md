@@ -24,6 +24,8 @@ func main() {
 ```
 No estamos especificando si es un signed integer o no, por lo tanto, el compilador de Go por default lo declara como int32 auqnue esto puede variar segun el sistema operativo en el que estes desarrolando.
 
+## **uint:**
+
 Bien ahora hablemos un poco sobre los unsigned interger, al contrario de los signed interfer, este tipo de numeros no cuenta con un rango de numeros negativos, es decir, que el rango inicia desde cero y es limitado segun el tamaño del tipo de dato, en Go tenemos tres: uint8, uint16 y uint32, con los siguientes rangos:
 
 - uint8:  0 a 255
@@ -81,32 +83,3 @@ func main() {
 
 Generara un error.
 
-## **Floats:**
-
-Los floats son un tipo de numero especial en Go que nos permiten utilizar numeros con el punto decimal, esto nos permite realizar operaciones artimeticas con resultados mas complejos. En Go los floats siguen el estandar IEEE 754, el cual es implementado por todas las CPUs modernas, dentro de este estandar podremos encontrar 2 tamaños diferentes: float32 y float64 bits.
-
-- float32: 1.4e-45 hasta 3.4e38
-- float64: 4.9e-324 hasta 1.8e308
-
-```golang
-	var x float32 = 10.32
-
-    var y float64 = 11.234
-    yx := 12.234 // Siempre sera float64
-
-```
-
-Al igual que con los tipos numericos "int" con los floats tenemos la posibilidad de realizar las siguientes operaciones aritmeticas:
-
-```golang
-
-func main() {
-    x = 10.05
-    y = 3.05
-    
-    fmt.Println(x + y) // 13.1
-    fmt.Println(x - y) // 7
-    fmt.Println(x * y) // 30.6525
-    fmt.Println(x / y) // 3.4426
-}
-```
