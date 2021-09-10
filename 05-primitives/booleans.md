@@ -1,4 +1,4 @@
-## **Boleans**
+## **Booleans**
 
 Ahoy! mis hermano y hermanas del gremio de desarrolladores, el dia de hoy estudiaremos el tipo de dato "boolean" en el lenguaje de progrmacion Go, tambien veremos sus principales usos y aplicaciones.
 
