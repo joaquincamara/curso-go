@@ -1,7 +1,6 @@
 # Constantes
 
-Ahoy! mis compañeros desarrolladores, En la sección anterior platicamos 
+Ahoy! mis compañeros desarrolladores, hasta ahora ya hemos visto los tipos de datos primitivos en Go y las diferentes aplicaciones que podemos darle a las variables que tienen datos primitivos, los cuales son parte fundamental en cualquier programa creado con el lenguaje de programcion Go.
 
-mis compañeros desarrolladores, en esta sección del curso platicaremos sobre las constantes en Go y como podremos utilizarlas en sus diferentes implementaciones.
+En esta seccion veremos las constantes en el lenguaje de programcion Go y las diferentes aplicaciones que podemos darles en un programa escrito con este lenguaje.
 
-En la sección 
