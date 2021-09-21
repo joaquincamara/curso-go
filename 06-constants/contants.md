@@ -14,4 +14,5 @@ func main() {
 }
 ```
 
-Primero hablaramos sobre algunas convenciones que tenemos que considerar al momento de nombrar constantes en Go, como sabemos, en algunos lenguajes existe la convecion de nombrar a las constantes en letras mayusculas separando las palabras que forman el nombre con un guin bajo, ejemplo: MY_CONSTANT, pero, debemos recordar que al escribir una variable o en este caso una constante, en la cual su nombre inicie con mayuscula el compilador de Go la hara publica. 
+Como sabemos, en algunos lenguajes existe la convecion de nombrar a las constantes en letras mayusculas separando las palabras que forman el nombre con un guin bajo, ejemplo: MY_CONSTANT, pero, debemos recordar que al escribir una variable o en este caso una constante, en la cual su nombre inicie con mayuscula el compilador de Go la hara publica. 
+
