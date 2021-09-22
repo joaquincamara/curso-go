@@ -14,5 +14,12 @@ func main() {
 }
 ```
 
-Como sabemos, en algunos lenguajes existe la convecion de nombrar a las constantes en letras mayusculas separando las palabras que forman el nombre con un guin bajo, ejemplo: MY_CONSTANT, pero, debemos recordar que al escribir una variable o en este caso una constante, en la cual su nombre inicie con mayuscula el compilador de Go la hara publica. 
+Como sabemos, en algunos lenguajes existe la convecion de nombrar a las constantes en letras mayusculas separando las palabras que forman el nombre con un guin bajo, ejemplo: MY_CONSTANT, pero, debemos recordar que al escribir una variable o en este caso una constante, en la cual su nombre inicie con mayuscula el compilador de Go la hara publica. Por lo tanto, la convencion para escribir constantes en Go, es la misma que usamos para las variables: "camelCase"
 
+```golang
+
+func main() {
+    const camelCase string = "I AM A CONSTANT STRING NAMED CORRECTLY"
+    const CAMEL_CASE string = "BAD" // constante publica y nombrada erroneamente 
+}
+```
