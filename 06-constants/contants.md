@@ -14,7 +14,7 @@ func main() {
 }
 ```
 
-Como sabemos, en algunos lenguajes existe la convecion de nombrar a las constantes en letras mayusculas separando las palabras que forman el nombre con un guin bajo, ejemplo: MY_CONSTANT, pero, debemos recordar que al escribir una variable o en este caso una constante, en la cual su nombre inicie con mayuscula el compilador de Go la hara publica. Por lo tanto, la convencion para escribir constantes en Go, es la misma que usamos para las variables: "camelCase"
+Como sabemos, en algunos lenguajes existe la convecion de nombrar a las constantes en letras mayusculas separando las palabras que forman el nombre con un guin bajo, ejemplo: MY_CONSTANT, pero, debemos recordar que al escribir una variable o en este caso una constante, en la cual su nombre inicie con mayuscula el compilador de Go la exportara fuera del paquete donde fue declarada. Por lo tanto, la convencion para escribir constantes en Go, es la misma que usamos para las variables: "camelCase"
 
 ```golang
 
@@ -25,51 +25,7 @@ func main() {
 ```
 
 
-all we're working with is an alias for an integer 32. Today, I want to talk about constants
-
-and how you can use them in your NGO applications. Now, there are several things that we need
-
-to talk about with constants. So like we've been doing, I want to break this down into
-
-several categories. The first thing that I want to talk about is how we're going to name
-
-constants in our NGO applications. Then we'll talk about type constants, followed by a discussion
-
-about untyped constants. And we'll talk about the differences between those two, and the
-
-options that each one gives us. And then we'll talk about a method of generating constants
-
-that are called enumerated constants. And finally, we'll end our discussion by talking
-
-about enumeration expressions, which are going to build upon the concepts that we're going
-
-to talk about in that first enumeration discussion. The first thing that I want to talk about
-
-is how we're going to name our constants. So all constants are going to be preceded
-
-with the const keyword, that's going to let the compiler know that that's what we're trying
-
-to work with. Now, if you've come from other languages, you might be expecting that we're
-
-going to name our constants, something like this, where we're going to have all uppercase
-
-letters and separate the words with underscores. The problem with that is if we do that and
-
-go, then the first letter is going to be uppercase. And as you remember, from our discussion on
-
-variables, if we've got an uppercase first letter, that's going to mean that the constant
-
-is going to be exported. And we don't always want that. So instead of this, we're actually
-
-going to name our constants the same way that we named variables.
-
-So if we had a variable that we wanted to call my const, and we didn't want to export
-
-it, then we would start with a lowercase first letter, or in other words, we would use camel
-
-casing. And if we did want to export this symbol, then we would simply change that first
-
-character to uppercase. Now assuming that we're going to be working with an internal
+Now assuming that we're going to be working with an internal
 
 constant, then we're going to switch this back to a lowercase first letter. And then
 
@@ -402,153 +358,153 @@ so we're basically going to multiply this by two to the 10th. And then we're goi
 multiply by two to the hundreds for the megabyte, and then two to the 1004, gigabyte, and so
 
 on. So when we run this, we get a really convenient way to format an arbitrary file size into
-101:41
+
 a human readable format. And in the effective go article, it actually shows you how to put
-101:46
+
 a switch block, which we haven't talked about. So you can make a decision about which constant
-101:50
+
 you're going to use based on the size of the incoming value. So here, we get this nice
-101:54
+
 way to format this relatively difficult number to read to be the very easily read 3.73 gigabytes.
-102:02
+
 Now another thing that can be very valuable to do is using bit shifting in order to set
-102:06
+
 Boolean flags inside of a single byte. So if I paste this example in, we can see an
-102:13
+
 example of that. So let's just say that we've got an application and that application has
-102:16
+
 users and those users have certain roles. So inside of this constant block, here, I'm
-102:21
+
 defining various roles that we can have. So for example, you might be an admin, you might
-102:25
+
 be at the headquarters or out in the field somewhere, you might be able to see the financials
-102:30
+
 or see the monetary values. And then there may be some regional roles. So can you see
-102:34
+
 properties in Africa, can you see properties in Asia, Europe, North America, or South America.
-102:39
+
 So in order to define these constants, what I'm doing is I'm setting the value to one
-102:44
+
 bit shifted biota. So the first constant is admin is one bit shifted zero places, so it's
-102:51
+
 a literal one, the second one is one bit shifted one place, that's two, and then four, and
-102:57
+
 then eight, and then 16, and so on.
-103:00
+
 So what I have is each one of these constants is going to occupy one location in a byte.
-103:05
+
 So down here in the main program, I'm defining the roles in a single byte. And I'm oaring
-103:10
+
 together is admin can see financials and can see Europe now if you remember, oaring, is
-103:16
+
 going to be set to true if one of the values is true, or the other one. So his admin has
-103:21
+
 the binary representation of 0000001. I think that's enough zeros, seven zeros, followed
-103:27
+
 by one can see financials is going to end up with 100, can see Europe is going to end
-103:34
+
 up with the value 100000. And so when we order those all together, we're going to get this
-103:40
+
 byte that has these three flags set to true. So when we run this, we see that we've encoded
-103:47
+
 eight access roles for user into a single byte of data. So we're able to store this
-103:53
+
 information extremely efficiently. So if I want to see for example, if this user is an
-103:57
+
 admin, I can go ahead and print his admin, and then print out the value. And then in
-104:05
+
 order to determine if that's valid or not, then I can do a little bit of bitwise mathematics
-104:09
+
 here. So I can take the constant is admin, and that with the roles, and what that's going
-104:15
+
 to do is that's going to apply what's called a bit mask. So only the bits that are set
-104:20
+
 in the is admin constant, and our roles are going to be left as true, which means if we're
-104:24
+
 an admin, we're going to have the value one set at that first bit. And then I can compare
-104:29
+
 that to the is admin constant. So when I run this, if we have the admin role, then we're
-104:35
+
 going to get the value true. Now, if I check something that I don't have the role, so let
-104:39
+
 me go ahead and copy this down. And then let's just see if they're at the headquarters, so
-104:46
+
 we'll put that in here. And it's exactly the same bitwise operations, we're just changing
-104:52
+
 our mask. If we run this, we see that is headquarters equals false Actually, let me put in my Line
-105:00
+
 return here, and then run this again. And you see that is headquarters equals false.
-105:05
+
 So we can very quickly and very efficiently store a lot of different information about
-105:09
+
 what roles and access rights a user might have, and a simple byte. And having this constant
-105:14
+
 defined with a numeration expression makes it really fast and really efficient and really
-105:19
+
 clear in our application. Okay, so let's go into a summary and review what we've talked
-105:23
+
 about in this video. constants are another one of those foundational elements, that is
-105:28
+
 going to be a part of almost every application you're going to write. Now, the first thing
-105:32
+
 that we learned about with constants is that they're immutable, but they can be shadowed.
-105:37
+
 So we can create a constant, we cannot assign a new value to it. But if we create a constant
-105:42
+
 on an inner scope from an existing constant, then not only can we change the value, but
-105:47
+
 we can even change the type, because that inner scope is going to shadow the outer scope
-105:51
+
 constant, they have to be replaceable by the compiler at compile time, so the value must
-105:56
+
 be calculable. So we're not gonna be able to access functions or command line arguments
-106:01
+
 in order to determine the value of the constants in our application. But we are going to be
-106:05
+
 able to do simple expressions like we talked about in the enumeration section. They're
-106:10
+
 named like variables. So if you want to export the value of the constant outside of your
-106:14
+
 package, then you're going to use Pascal casing. And if you want to leave it as an internal
-106:18
+
 value to the package, then you're going to use camel casing to name that constant. Type
-106:24
+
 constants work just like immutable variables. So you can use them in arithmetic operations,
-106:28
+
 you can pass them into functions, but they can only interoperate with the same type untyped
-106:34
+
 constants have a little bit more flexibility. So they work just like the literals. So if
-106:39
+
 you replace that constant throughout your application with the literal value of that
-106:43
+
 constant, that's how it's going to work. So that's going to allow us to interoperate with
-106:46
+
 similar types. So we had the value 42 defined as an untyped constant. And we could add that
-106:51
+
 to an integer 16, we could add that to an integer, we can add that to a un 16. Any of
-106:56
+
 those would work, because the literal 42 will work in all of those cases. Then we talk about
-107:02
+
 the enumeration types that we can work with. And we learned about the special symbol Iota.
-107:07
+
 That allows us to start with as values zero and increments one time every time we use
-107:12
+
 it inside the same const block. Now the one thing that we have to watch out for is that
-107:16
+
 constant values that match the zero values of variables can cause subtle bugs in your
-107:21
+
 application, because you might have logic that you expect it to initialize the value
-107:24
+
 of the constant. And if something happens and then initialization doesn't occur, then
-107:29
+
 you're going to be working with zero value, which might give you a false match to a constant
-107:32
+
 that you're evaluating
-107:33
+
 against. Using that Iota operator, we can actually create what are called enumeration
-107:38
+
 expressions. So we can define the value of the constant dynamically by combining Iota
-107:44
+
 with any arithmetic bitwise operation, or bit shifting operation that's allowable with
-107:50
+
 the primitive type that the constant and representing, I want to talk about the first two collection
