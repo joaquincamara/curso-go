@@ -26,7 +26,6 @@ func main() {
 
 
 Now assuming that we're going to be working with an internal
-
 constant, then we're going to switch this back to a lowercase first letter. And then
 
 let's talk about how we can create what's called a typed constant. Now a typed constant
