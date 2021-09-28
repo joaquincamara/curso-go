@@ -25,6 +25,7 @@ func main() {
 ```
 
 
+// TYPED CONSTANTS
 Now assuming that we're going to be working with an internal
 constant, then we're going to switch this back to a lowercase first letter. And then
 
@@ -38,6 +39,8 @@ we can set it equal to a value, then if we want to prove that that worked out th
 
 we expected it to, then we can go ahead and print out the value in the type of the constant.
 
+
+// INMUTABILITY AND COMPILATION
 And we will do that by using this printf statement here. And then when we run this, we see that
 
 the constant is in fact created. It's got the value 42 that we assigned, and it's got
