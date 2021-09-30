@@ -40,7 +40,7 @@ we can set it equal to a value, then if we want to prove that that worked out th
 we expected it to, then we can go ahead and print out the value in the type of the constant.
 
 
-// INMUTABILITY AND COMPILATION
+// INMUTABILITY
 And we will do that by using this printf statement here. And then when we run this, we see that
 
 the constant is in fact created. It's got the value 42 that we assigned, and it's got
@@ -51,6 +51,8 @@ to remain constant. So if we tried to do something like this, change this to the
 
 the compiler throws an error, because we're not allowed to change the value of a constant.
 
+
+// Assignation at compilation
 Another characteristic of a constant is that it has to be assignable at compile time. So
 
 for example, if I wanted to have a constant that represented the sine of pi over two,
