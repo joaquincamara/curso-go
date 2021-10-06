@@ -25,7 +25,7 @@ func main() {
 ```
 
 
-// TYPED CONSTANTS
+// TYPED CONSTANTS // 
 Now assuming that we're going to be working with an internal
 constant, then we're going to switch this back to a lowercase first letter. And then
 
