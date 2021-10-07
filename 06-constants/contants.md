@@ -20,7 +20,7 @@ Como sabemos, en algunos lenguajes existe la convecion de nombrar a las constant
 
 func main() {
     const camelCase string = "I AM A CONSTANT STRING NAMED CORRECTLY"
-    const CAMEL_CASE string = "BAD" // constante publica y nombrada erroneamente 
+    const CAMEL_CASE string = "BAD" // constante publica y nombrada erroneamente //
 }
 ```
 
