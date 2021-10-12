@@ -512,4 +512,3 @@ expressions. So we can define the value of the constant dynamically by combining
 with any arithmetic bitwise operation, or bit shifting operation that's allowable with
 
 the primitive type that the constant and representing, I want to talk about the first two collection 
-//
