@@ -25,19 +25,17 @@ func main() {
 ```
 
 
-// TYPED CONSTANTS // 
-Now assuming that we're going to be working with an internal
-constant, then we're going to switch this back to a lowercase first letter. And then
 
-let's talk about how we can create what's called a typed constant. Now a typed constant
 
-is created very similarly to a typed variable. So we can start with the const keyword, then
+Bien, ahora que ya aclaramos los estandares para el nombramiento de constantes en Go, podemos platicar sobre las constantes tipeadas, por fortuna, el proceso es practicamente igual al de crear variables tipeadas, la unica diferencia, es que en lugar de utilizar la palabra clave "var", usaremos la palabra clave "const".
 
-the name of our constant, and then we're going to list the type of the content, and then
+```golang
 
-we can set it equal to a value, then if we want to prove that that worked out the way
-
-we expected it to, then we can go ahead and print out the value in the type of the constant.
+func main() {
+    const pi int32 = 3.1416
+    const CAMEL_CASE string = "BAD" // constante publica y nombrada erroneamente //
+}
+```
 
 
 // INMUTABILITY
@@ -512,3 +510,4 @@ expressions. So we can define the value of the constant dynamically by combining
 with any arithmetic bitwise operation, or bit shifting operation that's allowable with
 
 the primitive type that the constant and representing, I want to talk about the first two collection 
+//
