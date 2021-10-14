@@ -33,7 +33,7 @@ Bien, ahora que ya aclaramos los estandares para el nombramiento de constantes e
 
 func main() {
     const pi int32 = 3.1416
-    const CAMEL_CASE string = "BAD" // constante publica y nombrada erroneamente //
+    const myString = "I am a string"
 }
 ```
 
