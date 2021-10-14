@@ -37,17 +37,15 @@ func main() {
 }
 ```
 
+Asi como podran estar imaginando los valores de las constantes en Go no pueden ser modificados, por lo tanto realizar la siguiente accion nos producira un error:
 
-// INMUTABILITY
-And we will do that by using this printf statement here. And then when we run this, we see that
+```golang
 
-the constant is in fact created. It's got the value 42 that we assigned, and it's got
-
-the type that we assigned to it. Now the reason it's a constant and not a variable is it has
-
-to remain constant. So if we tried to do something like this, change this to the value 27, then
-
-the compiler throws an error, because we're not allowed to change the value of a constant.
+func main() {
+    const pi int32 = 3.1416
+    pi = 100 // Esto producira un error al momento de correr el programa.
+}
+```
 
 
 // Assignation at compilation
