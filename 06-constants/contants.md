@@ -48,7 +48,7 @@ func main() {
 ```
 
 
-// Assignation at compilation
+// Assignation at compilation //
 Another characteristic of a constant is that it has to be assignable at compile time. So
 
 for example, if I wanted to have a constant that represented the sine of pi over two,
