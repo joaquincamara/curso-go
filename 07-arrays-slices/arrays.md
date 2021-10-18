@@ -19,3 +19,24 @@ func main() {
 }
 ```
 
+Al igual que con las variables podemos utilizar la sintaxis corta de Go para declarar arrays, al igual que como lo hariamos con una variable, la diferencia es que tendriamos que asignar de manera manual los elementos del array al momento de su declaracion.
+
+```golang
+
+func main() {
+    arr := [2]int{1, 2} 
+	fmt.Println(arr) // [1 2]
+
+}
+```
+
+Por ultimo en caso de que, decidamos declar la longitud del array por medio de la cantidad litiral de elementos podemos utilizar una elipsis "..." en lugar de epecificar la longitud del array. De esta forma el length del arrays es determinado por los elemento al momento de la declarion.
+
+```golang
+
+func main() {
+    arr := [...]int{1, 2} 
+	fmt.Println(arr) // [1 2]
+
+}
+```
