@@ -80,3 +80,29 @@ func main() {
     fmt.Println(amy.breed) // {bassedhound} 
 }
 ```
+
+Algo muy util sobre los structs es que soportan composicion, lo cual, nos permite crear variables basadas en diferentes structs y sumado a la posibilidad de hacer publicas las propiedades de los structs podemos simular caracteristicas de la programcion orientada a objetos como encapsulacion y herencia.
+
+```golang
+
+func main() {
+
+    type Canine struct {
+        legs int32
+        tail int32
+    }
+
+    type Dog struct {
+        name string
+        breed string
+        age int32
+        specie Canine
+    }
+
+
+
+    var amy =  Dog{name:"Amy", breed: "bassedhound", age: 1, specie: Canine{legs: 4, tail: 1}}
+    fmt.Println(amy) // {bassedhound}
+    fmt.Println(amy.specie.legs) // {4} 
+}
+```
