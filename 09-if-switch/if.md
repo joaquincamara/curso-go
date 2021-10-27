@@ -1,4 +1,4 @@
-## Sentencia if 
+##  If 
 
 Ahoy! navegantes del ciberespacio, es esta seccion platicaremos sobre las diferentes formas de implementacion y uso que pueden tener las sentencias if en el lenguaje Go.
 
@@ -62,7 +62,7 @@ func main() {
         fmt.Println("Los numeros son iguales")
     }
 
-    // El operador "||" evalua que ambas condiciones sean verdaderas, si lo son, se ejecuta el codigo del "if"
+    // El operador "&&" evalua que ambas condiciones sean verdaderas, si lo son, se ejecuta el codigo del "if"
     if num1 == num2 && num2 == num3{
         fmt.Println("Los numeros son iguales")
     }
