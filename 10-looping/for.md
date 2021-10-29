@@ -32,8 +32,20 @@ func main() {
 
 ```
 
+Para los y las mas veteranas, se habran dado cuenta que no tenemos una seccion en el curso que hable sobre la sentencia "while", y esto es porque en Go, no tenemos una palabra reservada para poder utilizar dicha sentencia. Esto no significa que no podamos replicar su funcionamiento.
 
+Si pensamos en como funciona la setencia "while", lo que hace, es que while o mientras cierta condicional sea verdadera se ejecutara cierto codigo, esto puede ser representado en un "for" en Go de la siguiente forma:
 
+```golang
 
+func main() {
+	num := 1
+	for num < 10 { // Mientras esta condicion sea verdadera
+		num += num // Se ejecuta esta seccion
+	}
+	fmt.Println(num) // 16
+}
+```
 
+Como vimos en el ejemplo anterior, los "for" en Go, si omitimos el estado inicial y el estado final dejando solo la condicion simularemos la sentencia "while". 
 
