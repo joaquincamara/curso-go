@@ -63,6 +63,8 @@ func main() {
 }
 ```
 
+### **Recover**
+
 Go nos brinda una forma de recuperarnos de un "panic", el cual es por medio de la funcion integrada "recover", la cual es llamada dentro una funcion diferida, el "recover", se encargara de detener el estado de "panic", en el sistema y regresara un mensaje de error construido en el mensaje de error implementado en la funcion "panic" sin terminar la ejecucion del programa.
 
 ```golang
