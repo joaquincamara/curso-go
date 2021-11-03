@@ -20,4 +20,17 @@ func myString(str string) {
 }
 ```
 
-Como dijimos antes, tener que copiar valores de diferente tamaño en varias funciones puede llegar a afectar el rendimiento de nuestro programa. Ahora intentemos lograr la misma funcionalidad pero con pointers. Para el lector mas veterano, podria decir que al usar pointers, imprimiriamos la direccion en memoria de la variable y no el valor que se aloja en ella, y es correcto, para acceder al valor     
+Como dijimos antes, tener que copiar valores de diferente tamaño en varias funciones puede llegar a afectar el rendimiento de nuestro programa. Ahora intentemos lograr la misma funcionalidad pero con pointers. Para el lector mas veterano, podria decir que al usar pointers, imprimiriamos la direccion en memoria de la variable y no el valor que se aloja en ella, y es correcto, para indicar que una variable apunta a la direccion de memoria de un valor utilizamos el siguiente caracter "&" y para acceder al valor de la direccion en memoria utilizamos el caracter "*".
+
+```golang
+
+func main() {
+    var initString = "Soy el valor original"
+    myString(&initString)
+}
+
+func myString(str *string) {
+    fmt.Println(*str) // imprime: el valor dentro de la direccion de memoria de la variable initString
+    fmt.Println(str) //   imprimer: la direccion en memoria de la variable initString
+}
+```
