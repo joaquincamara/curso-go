@@ -69,7 +69,7 @@ func printer(message string) {
 Algo que hace un recurso muy pontente a las funciones en Go, es que son tratadas como ciudadanos de primera clase, esto quiere decir, que pueden ser pasadas como parametros a otras funciones y tambien pueden ser tomadas como valores dentro de variables. Esto nos permite adaptar nuestro codigo para implementar varios paradigmas y estilos de programacion.
 
 
-En el siguiente ejemplo haremos uso de varios conceptos, el primero, es que al tener una funcion dentro de otra estamos generando un "closure", lo que permite que la funcion internar pueda acceder al contexto 
+En el siguiente ejemplo haremos uso de varios conceptos, el primero, es que al tener una funcion dentro de otra estamos generando un "closure", lo que permite que la funcion internar pueda acceder al los parametros o variables de la funcion que la rodea, de igual forma la funcion interna es usada como valor de la variable "sum".
 
 ```golang
 
@@ -86,3 +86,26 @@ func maths(num1 int, num2 int) {
 }
 
 ```
+
+Por ultimo tenemos las funciones varidicas o varadic functions en ingles, estas funciones reciben este nombre porque la cantidad de parametros que se le pueden pasar a estas funciones es variable, la unica limitante es que todos los parametros que le pasemos a estas funciones deben de ser del mismo tipo.
+
+```golang
+
+func main() {
+    fmt.Println(sum(1, 2)) // imprime: 3
+    fmt.Println(sum(1,2,3)) // imprime: 5
+}
+
+func sum(nums ...int) {
+    result := 0
+
+    for _, v := range nums {
+        result += v
+    }
+
+    return result
+}
+
+```
+
+En el ejemplo anterior vemos que es necesario hacer un for / range al parametro nums, esto es porque Go interpreta a los parametros de las funciones varidicas como "slices".
