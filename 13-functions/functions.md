@@ -66,3 +66,23 @@ func printer(message string) {
 }
 ```
 
+Algo que hace un recurso muy pontente a las funciones en Go, es que son tratadas como ciudadanos de primera clase, esto quiere decir, que pueden ser pasadas como parametros a otras funciones y tambien pueden ser tomadas como valores dentro de variables. Esto nos permite adaptar nuestro codigo para implementar varios paradigmas y estilos de programacion.
+
+
+En el siguiente ejemplo haremos uso de varios conceptos, el primero, es que al tener una funcion dentro de otra estamos generando un "closure", lo que permite que la funcion internar pueda acceder al contexto 
+
+```golang
+
+func main() {
+	maths(2, 2)
+
+}
+
+func maths(num1 int, num2 int) {
+	sum := func(x int, y int) {
+		fmt.Println(x + y)
+	}
+	sum(num1, num2)
+}
+
+```
