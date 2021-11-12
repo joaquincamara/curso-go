@@ -10,10 +10,29 @@ En el siguiente ejemplo veremos como es la sintaxis de una interfaz en Go, como 
 
 ```golang
 
-type dogBehavior interface {
+type Dog interface {
     Bark(dogName string) bark string // Arya woof woof 
     DogsName(dogName string) // Arya!
 }
 ```
 
+
+Algo interesante de la interfaces en Go, es que como los structs, las interfaces pueden embeberse entre ellas para modularizar sus funcionalidades.
+
+En el siguiente ejemplo usaremos nuestra interfaz "Dog", y en ella tendremos las interfaz "Animal", la cual, nos data metodos con funciones basicas de un animal como: comer, caminar y dormir.
+
+```golang
+
+type Animal interface {
+    Walk(animalName string) // Imprime Arya is walking!
+    Eat(animalName string) // Imprime Arya is eating!
+    Sleaping(animalName string) // Imprime Arya is sleeping!
+}
+
+type Dog interface {
+    Bark(dogName string) bark string // Arya woof woof 
+    DogsName(dogName string) // Arya!
+    Animal // ahora tenemos todos los metodos de la interfaz Animal
+}
+```
 
