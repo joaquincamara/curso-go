@@ -36,3 +36,5 @@ type Dog interface {
 }
 ```
 
+Para muchos el uso de las interfaces puede parecer redundante, ya que a primera vista si puede interpretar que escribimos dos veces el metodo, una vez para la interfaz y otra vez en el struct que vaya a implementar el metodo, y esta percepcion normalmente sucede cuando queremos interpretar las interfaces como su fueran clases y no como simplemente un conjunto de metedos.
+
