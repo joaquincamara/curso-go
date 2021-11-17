@@ -36,5 +36,25 @@ type Dog interface {
 }
 ```
 
-Para muchos el uso de las interfaces puede parecer redundante, ya que a primera vista si puede interpretar que escribimos dos veces el metodo, una vez para la interfaz y otra vez en el struct que vaya a implementar el metodo, y esta percepcion normalmente sucede cuando queremos interpretar las interfaces como su fueran clases y no como simplemente un conjunto de metedos.
+Para muchos el uso de las interfaces puede parecer redundante, ya que a primera vista si puede interpretar que escribimos dos veces el metodo, una vez para la interfaz y otra vez en el struct que vaya a implementar el metodo, y esta percepcion normalmente sucede cuando queremos interpretar las interfaces como su fueran clases y no como  un conjunto de metedos.
+
+un ejemplo claro son nuestras muestras anteriores, aunque es verdad que representan muy bien la funcionalidad de las interfaces aun se puede implementar de una forma mas aliniada a la filosofia de interfases en Go, hagamos un pequeño refactor a nuestras interfaces.
+
+Bien, algo que siempre tenemos que tener en cuenta, es la regla de "mantener las interfaces lo mas simple posible", por lo tanto, tener una interfaz "Animal", con todos los metodos que representan el comportamiento de un animal, tendremos varias interfaces encargadas de describir un comportamiento.
+
+```golang
+
+type Walker interface {
+    walk(animalName string) // Imprime Arya is walking!
+}
+
+type Eater interface {
+    eat(animalName string) // Imprime Arya is eating!
+}
+
+type Sleeper interface {
+    sleep(animalName string) // Imprime Arya is sleeping!
+}
+
+```
 
