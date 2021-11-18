@@ -45,16 +45,34 @@ Bien, algo que siempre tenemos que tener en cuenta, es la regla de "mantener las
 ```golang
 
 type Walker interface {
-    walk(animalName string) // Imprime Arya is walking!
+    walk(animalName string) // Imprime: Arya is walking!
 }
 
 type Eater interface {
-    eat(animalName string) // Imprime Arya is eating!
+    eat(animalName string) // Imprime: Arya is eating!
 }
 
 type Sleeper interface {
-    sleep(animalName string) // Imprime Arya is sleeping!
+    sleep(animalName string) // Imprime: Arya is sleeping!
 }
 
 ```
 
+Hasta ahorita todo bien, pero que hay de la interfaz "Dog", que implementa "Bark" and "DogName" ?, el problema con esta forma de implementar la interfaz, es que si, quisieramos crear una nueva interfaz que represente a un lobo, podriamos componer la interfaz "Dog", dentro de la interfaz "wolf", pero "wolf" tendria un metodo que no utilizaria "DogsName".
+
+Ahora hagamos un refactor de la interfaz "Dog".
+
+```Golang
+
+type Barker interface {
+    bark(animalName string) // Imprime: Arya is barking!
+}
+
+type Naming interface {
+    name(animalName string) // Imrpime: Arya!
+}
+```
+Ahora que tenemos una interfaz unica para el nombrado de los animales, ya no se encuntra atada a la interfaz "Dog", por lo tanto, podemos utilizarla para varios animales. Implementemos nuestra enterfaces:
+
+```golang
+```
