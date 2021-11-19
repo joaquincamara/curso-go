@@ -14,7 +14,7 @@ func main() {
 }
 ```
 
-Se estaran preguntando, ¿Por qué se esta imprimiento 104 en lugar de ¨h¨?, bueno, esto es porque los strings en Go son realmente alis de bytes, pero podemos hacer una pequeña conversion para tener el resultado que estamos esperando. 
+Se estaran preguntando, ¿Por qué se esta imprimiento 104 en lugar de ¨h¨?, bueno, esto es porque los strings en Go son realmente alias de bytes, pero podemos hacer una pequeña conversion para tener el resultado que estamos esperando. 
 
 ```golang
 
