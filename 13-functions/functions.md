@@ -4,7 +4,7 @@ Hola de nuevo navegantes del internet, hasta ahora hemos aprendido sobre los con
 
 Ahora veremos uno de los conceptos mas importantes en Go y en la mayoria de los lenguajes de progracion, en esta seccion aprenderemos sobre las funciones, su funcionamiento y las diferentes implementaciones que pueden tener con el lenguaje de programacion Go.
 
-En Go tenemos la posibilidad de utilizar las funciones de diferenes formas, ya que se puede implementar closures, high-order functions, funciones literales y regresar mas de un valor. Esto le da una gran vesatilidad a las funciones, para declarar una fucion utilizamos la palabra reservada "func", seguido del nombre de la funcion, una lista de parametros rodeada de parentesis, el tipo de dato que retornara y el cuerpo de la funcion.
+En Go tenemos la posibilidad de utilizar las funciones de diferenes formas, ya que se puede implementar closures, high-order functions, funciones literales y regresar mas de un valor. Esto le da una gran versatilidad a las funciones, para declarar una fucion utilizamos la palabra reservada "func", seguido del nombre de la funcion, una lista de parametros rodeada de parentesis, el tipo de dato que retornara y el cuerpo de la funcion.
 
 En el siguiente ejemplo tenemos una funcion llamada "sum", la cual recbide 2 parametros de tipo "int" y regresa un valor de tipo "int":0
 
