@@ -75,4 +75,5 @@ type Naming interface {
 Ahora que tenemos una interfaz unica para el nombrado de los animales, ya no se encuntra atada a la interfaz "Dog", por lo tanto, podemos utilizarla para varios animales. Implementemos nuestra enterfaces:
 
 ```golang
+
 ```
