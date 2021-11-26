@@ -94,3 +94,4 @@ En el ejemplo anterior podemos ver que se implementa la funcion diferida  "Iwill
 
 Para el lector mas veterano, podria decir que estas dos funciones se tratan de un try - catch, como los que podemos encontrar en lenguajes como Javascript y anque es posible simular el comportamiento de dichos elementos por medio de "panic" y "recover", es altamente recomendado no utilizar estas funciones como un try - catch, si no mas bien regresar un "error" cuando esto sea necesario. 
 
+
