@@ -70,7 +70,7 @@ Go nos brinda una forma de recuperarnos de un "panic", el cual es por medio de l
 ```golang
 
 func main() {
-    fmt.Println(printName("Joaquin")) // imprime: Joaquim
+    fmt.Println(printName("Joaquin")) // imprime: Joaquin
     fmt.Println(printName(nil)) // imprime: recovered from name need to be a string
 }
 

@@ -29,7 +29,6 @@ func main() {
         //4
 	}
 }
-
 ```
 
 Para los y las mas veteranas, se habran dado cuenta que no tenemos una seccion en el curso que hable sobre la sentencia "while", y esto es porque en Go, no tenemos una palabra reservada para poder utilizar dicha sentencia. Esto no significa que no podamos replicar su funcionamiento.
