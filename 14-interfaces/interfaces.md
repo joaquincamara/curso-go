@@ -107,3 +107,5 @@ func main() {
 }
 
 ```
+
+Como podemos ver usamos la interfaz Barker para implementar el mismo metodo en nuestros structs Dog y Wolf, de esta forma podemos usar de manera mas eficaz las interfaces, ya que podemos usar composicion junto con ellas a lo largo de nuestros programas.
