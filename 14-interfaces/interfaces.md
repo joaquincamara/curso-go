@@ -76,4 +76,34 @@ Ahora que tenemos una interfaz unica para el nombrado de los animales, ya no se 
 
 ```golang
 
+type Barker interface {
+	bark() // Imprime: Arya is barking!
+}
+
+type Wolf struct {
+	Name string
+}
+
+func (w Wolf) bark() {
+	fmt.Println(w.Name, "the wolf is barking")
+}
+
+type Dog struct {
+	Name string
+}
+
+func (d Dog) bark() {
+	fmt.Println(d.Name, "the dog is barking")
+}
+
+func main() {
+	var nimeria Barker
+	var arya Barker
+	nimeria = Wolf{Name: "Nimeria"}
+	arya = Dog{Name: "Arya"}
+	nimeria.bark()
+	arya.bark()
+
+}
+
 ```
