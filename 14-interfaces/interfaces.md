@@ -76,4 +76,4 @@ Ahora que tenemos una interfaz unica para el nombrado de los animales, ya no se 
 
 ```golang
 
-``` 
+```
