@@ -7,6 +7,4 @@ En terminos sencillos las "goroutines", son hilos o threads muy ligeros que son 
 Para crear una nueva goroutine, es necesario utilizar la palabra reservada "go", antes de la ejecucion de una funcion:
 
 ```golang
-
-
 ```
