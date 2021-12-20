@@ -16,3 +16,28 @@ func ahoy() {
 fmt.Println("Ahoy capitan")
 }
 ```
+
+En el ejemplo anterior vemos como la funcion "ahoy()", es ejecutada como una goroutine, algo interesante que sucede con este tipo de funciones es su implementacion concurrente. La concurrencia es el manejar varias cosas que pueden estar sucediendo al mismo tiempo, en nuestro ejemplo nosotros no tenemos control de la forma en la que se ejecuta la funcion, es decir en el siguiente caso, vemos que en la funcion main nuestras funciones ahoy, drunkenSailor y leaveHerJhonny son llamadas en este mismo orden, por lo tanto, deberiamos ver sus mensajes en ese mismo orden, pero debido a que las estamos ejecutando de manera concurrente el resultado podria ser diferente cada vez que ejecutemos el codigo.
+
+```golang
+
+func main() {
+    go ahoy()
+    go drunkenSailor()
+    go leaveHerJhonny()
+}
+
+func ahoy() {
+fmt.Println("Ahoy capitan")
+}
+
+func drunkenSailor() {
+    fmt.Println("What we are going to do with the drunken sailor")
+}
+
+func leaveHerJhonny() {
+    fmt.Println("oooh leave her, leave her Jhonny")
+}
+```
+
+Para tener control sobre el tiempo de ejecucion de nustras goroutines utilizamos un tipo de dato llamado "channel", el cual veremos en el siguiente capitulo.
