@@ -37,7 +37,6 @@ func drunkenSailor() {
 
 func leaveHerJhonny() {
     fmt.Println("oooh leave her, leave her Jhonny")
-    
 }
 ```
 
