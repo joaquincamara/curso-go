@@ -102,10 +102,10 @@ func main() {
     // ...
 
     vf, okf := week["Abril"]
-    fmt.Println(v, ok) // 0 false
+    fmt.Println(vf, okf) // 0 false
 
     vt, okt := week["Martes"]
-    fmt.Println(v, ok) // 2 true
+    fmt.Println(vt, okt) // 2 true
 }
 
 ```
